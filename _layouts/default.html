@@ -8,13 +8,22 @@
     <link async rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
 </head>
-<body>
+  <body>
+    <main>
+
     {{ content }}
-        <footer class="site-footer clearfix">
+
+    </main>
+
+    <footer>
+
       <section class="copyright">
         <a href="{{ site.baseurl }}">{{ site.name }}</a> 2015 → {{"now" | date: "%Y"}}
       </section>
+
       <section class="poweredby">Made with ♥ on Jekyll</section>
+      
     </footer>
+
 </body>	
 </html>
