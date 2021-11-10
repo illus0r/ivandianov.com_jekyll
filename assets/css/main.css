@@ -298,7 +298,7 @@ html {
 body {
 	height: 100%;
 	max-height: 100%;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	font-weight: 400;
 	line-height: 1.4;
 	font-family: 'PPNeueMachina', sans-serif;	
@@ -337,20 +337,20 @@ h6 {
 }
 
 h1 {
-	font-size: 5em;
+	font-size: 3.2em;
 	
 }
 
 h2 {
-	font-size: 3.6em;
+	font-size: 2.4em;
 }
 
 h3 {
-	font-size: 3em;
+	font-size: 2em;
 }
 
 h4 {
-	font-size: 2.5em;
+	font-size: 1.3em;
 }
 
 h5 {
@@ -358,7 +358,7 @@ h5 {
 }
 
 h6 {
-	font-size: 2em;
+	font-size: 1em;
 }
 
 a {
@@ -402,7 +402,7 @@ img {
 
 ol,
 ul {
-	padding-left: 3em;
+	padding-left: 2em;
 }
 
 ol ol,
@@ -410,7 +410,7 @@ ul ul,
 ul ol,
 ol ul {
 	margin: 0 0 0.4em 0;
-	padding-left: 2em;
+	padding-left: 0.3em;
 }
 
 dl dt {
@@ -484,27 +484,25 @@ mark {
 
 code,
 tt {
-	padding: 1px 3px;
+	padding: 0.3em 0.5em;
 	font-family: Inconsolata, monospace, sans-serif;
-	font-size: 0.85em;
-	white-space: pre-wrap;
-	border: #E3EDF3 1px solid;
-	background: #F7FAFB;
+	font-size: 1em;
+	/* white-space: pre-wrap; */
+	border: #c6c8c9 1px solid;
+	background: #868686;
 	border-radius: 2px;
 }
 
 pre {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 0 0 1.75em 0;
-	border-top: #E3EDF3 1px solid;
-    border-bottom: #E3EDF3 1px solid;
+	padding: 0.3em 0.5em;
 	width: 100%;
-	padding: 10px;
 	font-family: Inconsolata, monospace, sans-serif;
-	font-size: 0.7em;
+	font-size: 0.9em;
 	white-space: pre;
 	overflow: auto;
+	background: #e4e4e4;
 }
 
 pre code,
@@ -557,16 +555,50 @@ table.plain tbody > tr:nth-child(odd) > th {
 
 
 /* ==========================================================================
-   3. Пошла пьянка
+   3. Base styles
    ========================================================================== */
 
+header {
+	padding: 1em;
+	margin-bottom: 1em;
+}
 
 main {
 	margin: 0 auto;
   max-width: 1650px;
-  width: 80%;
+  width: 75%;
 }
 
 footer {
 	padding: 1em;
 }
+
+time {
+	margin-bottom: 0.5em;
+}
+
+
+/* ==========================================================================
+   4. Mobile styles
+   ========================================================================== */
+
+
+	 @media only screen and (max-width: 600px) {
+
+		header {
+			padding: 0.3em;
+			margin-bottom: 1em;
+
+		}
+
+		main {
+			margin: 0.3em auto;
+			width: 98%;
+		}
+
+		footer {
+			padding: 0.3em;
+		}
+
+
+	}
