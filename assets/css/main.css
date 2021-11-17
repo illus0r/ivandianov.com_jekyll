@@ -216,9 +216,9 @@ h2 {
 
 :root {
 	--background-RGB: 255, 255, 255;
-	--text-RGB: 40, 40, 85;
-	--hover-RGB: 200, 30, 250;
-	--link-RGB: 130, 80, 231;
+	--text-RGB: 32, 32, 32;
+	--link-RGB: 9, 9,175;
+	--hover-RGB: 246, 90, 160;
 	--accent-RGB: 130, 80, 231;
 	--main-RGB: var(--accent-RGB);
 	--surface-RGB: 250, 245, 255;
@@ -240,6 +240,7 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   color: rgba(var(--text-RGB), 1);
   background: rgba(var(--background-RGB), 1);
+	
 
   -webkit-font-feature-settings: 'kern' 1;
   -moz-font-feature-settings: 'kern' 1;
@@ -269,17 +270,40 @@ a {
 	border-bottom: 1px solid rgba(var(--link-RGB), 0.3);
 	padding-bottom: 0.1em;
   transition-property: border-bottom, border-color, background, color, fill;
-  transition-duration: 0.33s;
+  transition-duration: 0s;
   transition-timing-function: ease-out;
 }
 
 a:hover {
   color: rgba(var(--hover-RGB), 1);
+  transition: color ease 0.33s;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--hover-RGB), 0.3);
+  transition-property: border-bottom, border-color, background, color, fill;
+  transition-duration: .33s;
+  transition-timing-function: ease-out;
+	
+}
+
+
+a.link-button {
+  color: rgba(var(--link-RGB), 1);
   transition: color ease 0s;
   text-decoration: none;
-  /* border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #3c3b3b; */
+	border: 1px solid rgba(var(--link-RGB), 0.1);
+	padding: 0.03em 0.12em 0.02em;
+	border-radius: 0.1em;
+  transition-property: border-bottom, border-color, background, color, fill;
+  transition-duration: 0.33s;
+  transition-timing-function: ease-out;
+}
+
+a.link-button:hover {
+  color: rgba(var(--hover-RGB), 1);
+  transition: color ease 0s;
+  text-decoration: none;
+  border: 1px solid rgba(var(--hover-RGB), 0.3);
+	padding: 0.03em 0.12em 0.02em;
   transition-property: border-bottom, border-color, background, color, fill;
   transition-duration: .33s;
   transition-timing-function: ease-out;
@@ -495,6 +519,7 @@ footer {
 
 .time {
 	padding-left: 0em;
+	color: rgba(var(--text-RGB), 0.5);
 }
 
 
@@ -529,6 +554,12 @@ footer {
     footer {
       padding: 0.3em;
     }
+
+		.post-title {
+			font-size: 1.6em;
+			margin-top: 0em;
+			font-weight: 400;
+		}
 
 
   }
