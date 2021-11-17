@@ -7,30 +7,34 @@ title: Main page title
 ---
 
 <section class="text">
-  <p>My name is Ivan Dianov [ī-və-n dē-ˈä-(ˌ)nōv], I explore complexity by writing code.</p>
+  <p>Hi, I am Ivan Danilov. Founder of a Russian generative art community <a href="">Genclub</a>. I explore complexity by writing code. Find me on <a href="https://twitter.com/i_dianov">Twitter</a>, <a href="https://www.henext.xyz/ivan_dianov">Henext</a> and <a href="https://t.me/ivandianov">Telegram [ru]</a>. Here I am writing about my experiemnts</p>
 </section>
 
-<section>
+<section class="blog-posts">
   {% for post in site.posts %}
-  <article>
-    <h2>
+  <div class="post-item">
+    <div class="time" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</div>
+    <h2 class="post-title">
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
     </h2>
-    <!-- <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time> -->
-    
-  </article>
+  </div>
+
 {% endfor %}
 </section>
 
 
-<section class="text">
+<!-- <section class="text">
+
+  <section class="text">
+  <p>My name is Ivan Dianov [ī-və-n dē-ˈä-(ˌ)nōv], I explore complexity by writing code.</p>
+  </section>  
   <p>There are processes, such as the climate change or the development of a human body, in which simple interactions of pieces lead to complex and unpredictable behavior of the system as a whole.</p>
   <p>Computer simulation allows us to handle complexity, tweak parameters and observe the surprising patterns that emerge. I'm obsessed with writing code and experimenting with multi-agent systems, cellular automata, and generative grammars.</br>
   I also use bugs in my code to create artistic effects. The bug is a symbol of the complexity of the world and of the limited consciousness of a human being. Our world is made up of countless mistakes, layered on top of each other. Even evolution is all about DNA replication errors.</p>
   <p>The whole world has gone wrong and will continue to move unpredictably. It is not to be resisted, it is to be enjoyed.
   </p>
 
-</section>
+</section> -->
 

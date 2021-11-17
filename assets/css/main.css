@@ -47,10 +47,10 @@ nav {
 :root {
   --fluid-min-width: 320;
   --fluid-max-width: 1500;
-  --fluid-min-size: 15;
+  --fluid-min-size: 16;
   --fluid-max-size: 20;
-  --fluid-min-ratio: 1.3;
-  --fluid-max-ratio: 1.33;
+  --fluid-min-ratio: 1.2;
+  --fluid-max-ratio: 1.4;
   
   --fluid-screen: 100vw;
   --fluid-bp: calc((var(--fluid-screen) - ((var(--fluid-min-width) / 16) * 1rem)) / ((var(--fluid-max-width) / 16) - (var(--fluid-min-width) / 16)));
@@ -100,31 +100,13 @@ nav {
 }
 
 
-@font-face {
-  font-family: 'source_serif';
-  src: url('sourceserifpro-black-webfont.woff2') format('woff2'),
-    url('sourceserifpro-black-webfont.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'source_serif';
-  src: url('sourceserifpro-regular-webfont.woff2') format('woff2'),
-    url('sourceserifpro-regular-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* Typography */
 
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  font: 400 var(--fluid-0) / 1.4 'source_serif', Georgia, serif;
+  font: 400 var(--fluid-0) / 1.6 'IBM Plex Mono', monospaced;
 }
 
 h1,
@@ -146,7 +128,7 @@ h2 {
 
 .prose > p:first-of-type {
   font-size: var(--fluid-1);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* Grid */
@@ -157,7 +139,7 @@ h2 {
   margin-right: auto;
   margin-left: auto;
   /* max-width: 1130px; */
-  width: 98%;
+  width: 90%;
 }
 
 .insulate {
@@ -209,7 +191,7 @@ h2 {
    1. Fonts and variables
    ========================================================================== */
 
-@font-face {
+/* @font-face {
 	font-family: "PPNeueMachina";
 	src: url("/assets/fonts/PPNeueMachina-Regular.woff") format("woff"); 
 	font-weight: normal;
@@ -228,7 +210,8 @@ h2 {
 	src: url("/assets/fonts/PPNeueMachina-Ultrabold.woff") format("woff"); 
 	font-weight: bold;
 	font-style: normal;
-}
+} */
+
 
 
 :root {
@@ -254,7 +237,7 @@ body {
   height: 100%;
   max-height: 100%;
   font-weight: 400;
-  font-family: 'PPNeueMachina', sans-serif; 
+  font-family: 'IBM Plex Mono', monospace;
   color: rgba(var(--text-RGB), 1);
   background: rgba(var(--background-RGB), 1);
 
@@ -276,24 +259,23 @@ h6 {
   font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   margin-top: 1em;
   margin-bottom: 0.4em;
-  font-family: "PPNeueMachina-Bold", sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 a {
-  color: #0d0d0d;
+  color: rgba(var(--link-RGB), 1);
   transition: color ease 0s;
   text-decoration: none;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #d8d8d8;
+	border-bottom: 1px solid rgba(var(--link-RGB), 0.3);
+	padding-bottom: 0.1em;
   transition-property: border-bottom, border-color, background, color, fill;
-    transition-duration: .33s;
-    transition-timing-function: ease-out;
+  transition-duration: 0.33s;
+  transition-timing-function: ease-out;
 }
 
 a:hover {
-  color: rgba(var(--link-RGB), 1);
-  transition: color ease 0.3s;
+  color: rgba(var(--hover-RGB), 1);
+  transition: color ease 0s;
   text-decoration: none;
   /* border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -392,7 +374,7 @@ mark {
 code,
 tt {
   padding: 0.3em 0.5em;
-  font-family: Inconsolata, monospace, sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 1em;
   /* white-space: pre-wrap; */
   border: #c6c8c9 1px solid;
@@ -405,7 +387,7 @@ pre {
   box-sizing: border-box;
   padding: 0.3em 0.5em;
   width: 100%;
-  font-family: Inconsolata, monospace, sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 0.9em;
   white-space: pre;
   overflow: auto;
@@ -434,7 +416,6 @@ table {
 table th,
 table td {
   padding: 8px;
-  line-height: 20px;
   text-align: left;
   vertical-align: top;
   border-top: #EFEFEF 0px solid;
@@ -463,15 +444,57 @@ table.plain tbody > tr:nth-child(odd) > th {
 
 header {
   padding: 0.5em;
-  margin-bottom: 1em;
+	display: flex;
+	justify-content: space-between;
+	font-style: italic;
+}
+
+main {
+	margin-top: 2em;
+}
+
+.blog-posts {
+	margin-top: 3em;
+}
+
+.logo {
+	font-size: 3em;
+}
+
+.nav-menu {
+	display: flex;
+	font-size: 1.3em;
+	display: block;
+}
+
+.nav-item {
+	margin-right: 0.3em;
+	height: auto;
+	display: block;
+	cursor: pointer;
 }
 
 footer {
   padding: 1em;
+	margin-top: 7em;
 }
 
 .text {
   width: 70%;
+}
+
+.post-title {
+	font-size: 2.4em;
+	margin-top: 0em;
+	font-weight: 400;
+}
+
+.post-item {
+	margin-bottom: 2em;
+}
+
+.time {
+	padding-left: 0em;
 }
 
 
