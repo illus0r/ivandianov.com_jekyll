@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: The Game of Ivan
 date: 2021-11-11 01:39
 category: 
 author: 
