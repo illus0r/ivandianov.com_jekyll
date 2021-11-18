@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The concept of ID in shaders
+title: The Concept of ID in Shaders
 date: 2021-09-02 09:59
 language: ru
 ---
