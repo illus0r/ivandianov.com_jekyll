@@ -47,7 +47,7 @@ nav {
 :root {
   --fluid-min-width: 320;
   --fluid-max-width: 1500;
-  --fluid-min-size: 16;
+  --fluid-min-size: 15;
   --fluid-max-size: 20;
   --fluid-min-ratio: 1.3;
   --fluid-max-ratio: 1.33;
@@ -470,6 +470,8 @@ header {
 	display: flex;
 	justify-content: space-between;
 	font-style: italic;
+	position: relative;
+	height: 5em;
 }
 
 main {
@@ -482,7 +484,161 @@ main {
 
 .logo {
 	font-size: 3em;
+	width: 100%;
+  position: relative;
+  height: 100%;
 }
+
+.logo.small {
+  background-color: #86D0F2;
+}
+.logo.medium {
+  background-color: rgba(var(--hover-RGB), 1);
+}
+
+.glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transform: translate(-50%, -50%); */
+  text-decoration: none;
+  color: rgba(var(--text-RGB), 1);
+}
+
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: 'Ivan Dianov';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.glitch:after {
+  color: #f0f;
+  z-index: -2;
+}
+.glitch:before {
+  color: #0ff;
+  z-index: -1;
+}
+
+.glitch:hover:before {
+  animation: glitch-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+.glitch:hover:after {
+  animation: glitch-left-2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+
+.small .glitch {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.small .glitch:before,
+.small .glitch:after {
+  content: 'Start';
+}
+.small .glitch:after {
+  color: #F40080;
+}
+.small .glitch:before {
+  color: #7FA500;
+}
+.small .glitch:hover:before {
+  animation: glitch-small 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+.small .glitch:hover:after {
+  animation: glitch-small 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+.medium .glitch {
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #4222F1;
+}
+.medium .glitch:before,
+.medium .glitch:after {
+  content: 'CSS Glitch';
+}
+.medium .glitch:after {
+  color: #C487C2;
+}
+.medium .glitch:before {
+  color: #00FF02;
+}
+.medium .glitch:hover:before {
+  animation: glitch-medium 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+.medium .glitch:hover:after {
+  animation: glitch-medium 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+@keyframes glitch-small {
+  0% {
+    transform: translate(0);
+  }
+  33% {
+    transform: translate(2px, 1px);
+  }
+  66% {
+    transform: translate(-1px, -1px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes glitch-medium {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes glitch-left {
+  0% {
+    transform: translate(0);
+  }
+  33% {
+    transform: translate(-5px, 3px);
+  }
+  66% {
+    transform: translate(5px, -3px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes glitch-left-2 {
+  0% {
+    transform: translate(0);
+  }
+  33% {
+    transform: translate(-5px, -3px);
+  }
+  66% {
+    transform: translate(5px, 2px);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
 
 .nav-menu {
 	display: flex;
@@ -532,7 +688,7 @@ footer {
     header {
       padding: 0.3em;
       margin-bottom: 1em;
-
+			height: 3em;
     }
 
     .wrap {
