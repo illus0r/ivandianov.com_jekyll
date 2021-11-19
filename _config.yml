@@ -25,7 +25,9 @@ defaults:
       layout: post
       class: post
 
-
+collections: 
+ projects:
+  output: true      
 
 # Multiligual
 lang:

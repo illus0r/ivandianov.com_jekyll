@@ -21,3 +21,15 @@ layout: page
 
 {% endfor %}
 </section>
+
+<div class="project-grid">
+{% assign items = site.projects | sort: 'date' %}
+{% for item in items reversed %}
+
+    <div class="project-item">
+      <img src="{{item.img-url}}">
+      <span>{{item.title}}</span>
+    </div>
+    {% endfor %}
+  </div>
+    
