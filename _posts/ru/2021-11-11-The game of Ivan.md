@@ -1,11 +1,12 @@
 ---
 layout: post
-title: The Game of Ivan
+title: Игра от Ивана
 date: 2021-11-11 01:39
 category: 
 author: 
 tags: []
 summary: 
+lang: ru
 ---
 
 Ну, э типа тут про то, как делать клеточный автомат такой странный, который наращивает разрешение своё.
