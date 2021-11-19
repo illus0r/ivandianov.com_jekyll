@@ -10,7 +10,7 @@ plugins:
   - jekyll-feed
 
 # Collections
-permalink: /:categories/:title/
+permalink: /:title/
 defaults:
   - scope:
       path: ""
