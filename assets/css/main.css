@@ -643,14 +643,19 @@ main {
 .nav-menu {
 	display: flex;
 	font-size: 1.3em;
-	display: block;
 }
 
 .nav-item {
 	margin-right: 0.3em;
-	height: auto;
+	height: 1.4em;
 	display: block;
 	cursor: pointer;
+	
+}
+
+.lang {
+	display: flex;
+	margin-left: 0.5em;
 }
 
 footer {
