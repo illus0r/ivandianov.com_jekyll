@@ -1,17 +1,19 @@
-<!-- <header>
+<header>
   <div class="logo">
-    <div class="glitch">Ivan Dianov</div>
+    <div class="glitch">{% for item in site.data.menu %}
+      {% if item.url %}<a href="{{ item.url }}">{{ t[lang].menu[item.id] }}</a>
+      {% else %}<a href="{{ site.url }}{{ site.baseurl }}{{ t_url_prefix }}{{ item.path }}">{{ t[lang].menu[item.id] }}</a>{% endif %}
+    {% endfor %}</div>
   </div>
   <div class="nav-menu">
-    <a href="/about" class="nav-item">About</a>
+    <!-- <a href="/about" class="nav-item">About</a> -->
     <div class="lang">
-      <a class="EN nav-item" href="{{ site.base-url }}{{ postEN.url }}">En</a>
-      <a class=" nav-item" href="{{ site.base-url }}{{ postRU.url }}">Ru</a>
+      {% include lang.html %}
     </div>
   </div>
-</header> -->
+</header>
 
-<nav class="menu">
+<!-- <nav class="menu">
   <section class="links">
     <strong class="">{{ site.title }}</strong>
     {% for item in site.data.menu %}
@@ -22,4 +24,4 @@
   <section class="languages">
     {% include lang.html %}
   </section>
-</nav>
+</nav> -->
