@@ -3,15 +3,38 @@ title: Ivan Dianov
 
 description: Generative art
 baseurl: ""
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ivandianov.com"
 
 
 plugins:
   - jekyll-feed
 
-collections: 
- projects:
-  output: true
+# Collections
+permalink: /:categories/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      class: post
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: post
+      class: post
+
+
+
+# Multiligual
+lang:
+  - en
+  - ru
+
+# collections: 
+#  projects:
+#   output: true
 
 
 # Exclude from processing.

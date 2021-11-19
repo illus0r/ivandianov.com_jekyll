@@ -1,8 +1,8 @@
 ---
 layout: post
-title: The Concept of ID in Shaders
+title: Концепт ID в шейдерах
 date: 2021-09-02 09:59
-language: ru
+lang: ru
 ---
 
 Расскажу про концепцию идентификатора в шейдерах и покажу, на что она способна.
