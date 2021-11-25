@@ -5,6 +5,8 @@ categories: ru
 title: Иван Дианов
 ---
 
-<section class="text">
-  <p>Привет, я Иван Дианов. Возглавляю русский генеративный клуб <a class="link-button" href="https://t.me/gen_c">Genclub</a>. Я исследую сложность через код. У меня есть <a class="link-button" href="https://twitter.com/i_dianov">Твиттер</a>, <a class="link-button" href="https://www.henext.xyz/ivan_dianov">Henext</a> и <a class="link-button" href="https://t.me/ivandianov">Телеграм</a>. Здесь я пишу о своих экспериментах.</p>
-</section>
+<!-- <section class="text"> -->
+Иван Дианов — генеративный художник, преподаватель и основатель [Генклуба](https://genclub.club) — сообщества где все всё генерят и прутся. С помощью кода исследует процессы, проявляющиеся в сложных системах.
+
+[Твиттер](https://twitter.com/i_dianov), [Хенекст](https://www.henext.xyz/ivan_dianov) и [канал в телеграме](https://t.me/ivandianov)
+<!-- </section> -->
