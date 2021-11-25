@@ -6,7 +6,7 @@ title: About Ivan
 
 ---
 
-My name is Ivan Dianov ['aɪvən dɪˈɑ:nəf], I explore complexity by writing code.
+My name is Ivan Dianov [eye-van dee-ah-nev], I explore complexity by writing code.
 
 There are processes, such as the climate change or the development of a human body, in which simple interactions of pieces lead to complex and unpredictable behavior of the system as a whole.
 
